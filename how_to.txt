@@ -1,0 +1,13 @@
+﻿Głównym celem projektu “Walutownik” jest przejrzysta prezentacja aktualnych kursów wybranych walut oraz dynamiki ich zmian.
+Projekt posiada graficzny interfejs użytkownika wykonany przy użyciu biblioteki Tkinter. W głównym oknie znajdują się przyciski, które przekierowują użytkownika do kolejnych funkcji programu, a następnie pozwalają wybrać, dla której waluty wybraną funkcję zastosować - informacje wyświetlane są w okienku tekstowym z paskiem przewijania.
+Program walutownik nie potrzebuje danych z dysku - sam pobiera dane ze strony, która bazuje na kursach walut Europejskiego Banku Centralnego oraz sam pobiera odpowiedni plik zdjęciowy, który potem umieszcza jako tło okna głównego. Do sprawnego działania potrzebuje dostępu do internetu. Dane pobierane są przy pomocy biblioteki requests, do odpowiedniego sformatowania danych posłużyła biblioteka pandas.
+
+
+Program podzielony jest na trzy części:
+1. “Przelicznik”- Funkcja przeliczania posiadanych jednostek danej waluty (wprowadzonych w oknie programu przez użytkownika) na ich wartość w innych walutach. Wyniki obliczeń prezentuje w nowym oknie w liście z możliwością przewijania. Program daje możliwość zapisania wyników do Excela poprzez kliknięcie odpowiedniego przycisku (plik Excela zapisuje się wówczas w folderze z plikiem .py). 
+
+
+2. “Wykres”- Program po wybraniu odpowiedniej waluty rysuje wykres jej funkcji w funkcji zadeklarowanym obszarze czasowym (domyślnie jest to przedział od 01.01.2021 aż do chwili, w której program jest włączany). Przy wywołaniu wykresu program automatycznie zapisuje go w folderze, w którym obecnie zapisany jest plik .py. Funkcja rysowania wykresu została wykonana przy wykorzystaniu biblioteki matplotlib. 
+
+
+3. “Kurs walut”-Funkcja ukazuje kurs danej (wybranej z pomocą przycisku) waluty z ostatnich 30 dni (możliwa zmiana liczby dni w programie na więcej lub mniej) w liście z możliwością przewijania. Program daje możliwość zapisania wyników do Excela poprzez kliknięcie odpowiedniego przycisku (plik Excela zapisuje się wówczas w folderze z plikiem .py).
